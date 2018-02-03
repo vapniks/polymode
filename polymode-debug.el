@@ -111,7 +111,7 @@ Key bindings:
   (if (not polymode-mode)
       (message "not in a polymode buffer")
     (let ((span (pm-get-innermost-span)))
-      (apply 'message "min:%d pos:%d max:%d || (%s) type:%s span:%s-%s %s" (pm--debug-info span))
+      (apply 'message "%s min:%d pos:%d max:%d || (%s) type:%s span:%s-%s %s %s" (pm--debug-info span))
       (move-overlay pm--inverse-video-overlay (nth 1 span) (nth 2 span) (current-buffer)))))
 
 (defvar pm-debug-display-info-message nil)
